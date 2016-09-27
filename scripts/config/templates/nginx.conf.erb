@@ -50,6 +50,10 @@ http {
     <% else %>
       try_files $uri $uri/ $fallback;
     <% end %>
+
+    <% if auto_index %>
+      autoindex on;
+    <% end %>
     }
 
   <% if clean_urls %>
